@@ -1,0 +1,37 @@
+@startuml
+
+class Articulo{
+-nombre: String
+-lote: int
+-peso: int
+-envasado: String
+}
+
+abstract class AnalistaDeCalidad{
++{abstract} validarProducto(Articulo): String
+}
+
+class ControlLote{
++validarProducto(Articulo): String
+}
+
+class ControlPeso{
++validarProducto(Articulo): String
+}
+
+class ControlEnvase{
++validarProducto(Articulo): String
+}
+
+class CompruebaCalidad{
++validarCalidad(Articulo): String
+}
+
+AnalistaDeCalidad -u-> AnalistaDeCalidad
+ControlLote -u-|> AnalistaDeCalidad
+ControlPeso -u-|> AnalistaDeCalidad
+ControlEnvase -u-|> AnalistaDeCalidad
+
+AnalistaDeCalidad .l.> Articulo
+
+@enduml
