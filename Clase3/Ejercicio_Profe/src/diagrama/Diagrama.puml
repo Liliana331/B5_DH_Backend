@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Mail{
+-origen: String
+-destino: String
+-tema: String
+}
+
+abstract class CompruebaMail{
++{abstract}comprobarMail(Mail mail): void
+}
+
+class DptoGerencia{
+comprobarMail(Mail mail): void
+}
+
+class DptoComercial{
+comprobarMail(Mail mail): void
+}
+
+class DptoTecnico{
+comprobarMail(Mail): void
+}
+
+class Spam{
+comprobarMail(Mail): void
+}
+
+Mail -r-> CompruebaMail
+
+CompruebaMail -u-> CompruebaMail
+DptoGerencia -u-|> CompruebaMail
+DptoComercial -u-|> CompruebaMail
+DptoTecnico -u-|> CompruebaMail
+Spam -u-|> CompruebaMail
+
+@enduml
