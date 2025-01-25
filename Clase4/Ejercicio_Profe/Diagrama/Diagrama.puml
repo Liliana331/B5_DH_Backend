@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Persona{
+-nombre: String
+-apellido: String
+-dni: int
+-fechaVacunacion: LocalDate
+-vacuna: String
+}
+
+interface IVacunacion{
++vacunar(Persona): String
+}
+
+class Proxy{
++vacunar(Persona): String
++validarFecha(Persona persona): void
+}
+
+class Vacunacion{
++vacunar(Persona): String
+}
+
+IVacunacion .l.> Persona
+Proxy -u-|> IVacunacion
+Vacunacion -u-|> IVacunacion
+Proxy -r-> Vacunacion
+
+@enduml
