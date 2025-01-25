@@ -1,0 +1,31 @@
+@startuml
+class Usuario{
+-dni: String
+-tipoUsuario: Enum
+}
+
+enum TipoUsuario{
++Free
++Premium
+}
+
+interface IServicioDescarga{
++descargar(Usuario): String
+}
+
+class ServicioDescarga{
++descargar(Usuario): String
+}
+
+class ProxyDescarga{
++descargar(Usuario): String
+}
+
+Usuario -l-> TipoUsuario
+IServicioDescarga -l-> Usuario
+
+IServicioDescarga <|-- ServicioDescarga
+IServicioDescarga <|-- ProxyDescarga
+
+ProxyDescarga -r-> ServicioDescarga
+@enduml
