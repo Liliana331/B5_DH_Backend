@@ -1,0 +1,38 @@
+@startuml
+class Hotel{
+-fechaEntrada: LocalDate
+-fechaSalida: LocalDate
+-ciudad: String
+}
+
+class Vuelo{
+-fechaSalida: LocalDate
+-fechaRegreso: LocalDate
+-origen: String
+-destino: String
+}
+
+class ApiVuelo{
++busquedaVuelo():
+}
+
+class ApiHotel{
++busquedaHotel():
+}
+
+interface IBusquedaFacade{
++busquedaReserva(ciudadHotel, fechaEntrada, fechaSalida, origen): String
+}
+
+class BusquedaFacade{
++busquedaReserva(ciudadHotel, fechaEntrada, fechaSalida, origen): String
+}
+
+BusquedaFacade .u.|> IBusquedaFacade
+
+BusquedaFacade .r.> Hotel
+BusquedaFacade .l.> Vuelo
+
+BusquedaFacade --> ApiHotel
+BusquedaFacade --> ApiVuelo
+@enduml
