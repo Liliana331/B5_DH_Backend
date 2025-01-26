@@ -1,0 +1,12 @@
+@startuml
+class Computadora{
+-sistemaOperativo: String
+-ram: int
+-discoDuro: int
+-contador: int
+}
+
+class ComputadoraFactory{
++getComputadora(sistemaOperativo): Computadora
+}
+@enduml

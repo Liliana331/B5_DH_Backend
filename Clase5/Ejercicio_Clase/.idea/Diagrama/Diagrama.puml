@@ -1,0 +1,14 @@
+@startuml
+class Arbol{
+-tipo: String
+-alto: int
+-horizontal: int
+-color: String
+-{static}contador: int
+}
+
+class ArbolFactory{
+-static poolArboles: HashMap<String, Arbol>
++getArboles(tipo): Arbol
+}
+@enduml
