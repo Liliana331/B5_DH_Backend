@@ -1,0 +1,43 @@
+@startuml
+interface IDescuento{
++calcularDescuento(Tarjeta, Producto, int): int
+}
+
+class Descuento{
+-apiTarjeta: ApiTarjeta
+-apiProducto: ApiProducto
+-apiCantidad: ApiCantidad
++calcularDescuento(Tarjeta, Producto, int): int
+}
+
+
+class Tarjeta{
+-numero: String
+-banco: String
+}
+
+class Producto{
+-nombre: String
+-tipo: String
+}
+
+class ApiTarjeta{
++descuento(Tarjeta): int
+}
+
+class ApiProducto{
++descuento(Producto): int
+}
+
+class ApiCantidad{
++descuento(cantidad): int
+}
+
+Descuento -u-|> IDescuento
+Tarjeta <.r. Descuento
+Producto <.l. Descuento
+
+Descuento --> ApiTarjeta
+Descuento --> ApiProducto
+Descuento --> ApiCantidad
+@enduml
