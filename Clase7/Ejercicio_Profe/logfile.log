@@ -1,0 +1,19 @@
+[2025-01-27 03:26:44] [ INFO ] [ListaNumeros:39] Promedio de la lista: 1.0
+[2025-01-27 03:27:33] [ INFO ] [ListaNumeros:39] Promedio de la lista: 1.0
+[2025-01-27 03:28:06] [ INFO ] [ListaNumeros:29] Final elementos
+[2025-01-27 03:28:06] [ INFO ] [ListaNumeros:39] Promedio de la lista: 1.0
+[2025-01-27 03:31:40] [ INFO ] [ListaNumeros:29] Final elementos
+[2025-01-27 03:31:40] [ INFO ] [ListaNumeros:42] Promedio de la lista: 1.0
+[2025-01-27 03:31:58] [ INFO ] [ListaNumeros:29] Final elementos
+[2025-01-27 03:31:58] [ INFO ] [ListaNumeros:42] Promedio de la lista: 1.0
+[2025-01-27 03:36:41] [ INFO ] [ListaNumeros:31] Final elementos
+[2025-01-27 03:36:41] [ INFO ] [ListaNumeros:44] Promedio de la lista: 1.0
+[2025-01-27 03:38:49] [ INFO ] [ListaNumeros:25] La longitud de la lista es mayor a 5
+[2025-01-27 03:38:49] [ INFO ] [ListaNumeros:27] La longitud de la lista es mayor a 10
+[2025-01-27 03:38:49] [ INFO ] [ListaNumeros:31] Final elementos
+[2025-01-27 03:38:49] [ INFO ] [ListaNumeros:44] Promedio de la lista: 1.0
+[2025-01-27 03:40:30] [ INFO ] [ListaNumeros:20] Final elementos
+[2025-01-27 03:40:30] [ INFO ] [ListaNumeros:33] Promedio de la lista: 1.0
+[2025-01-27 03:40:49] [ ERROR] [ListaNumeros:18] La lista es igual a cero
+[2025-01-27 03:40:49] [ INFO ] [ListaNumeros:20] Final elementos
+[2025-01-27 03:40:49] [ ERROR] [ListaNumeros:27] La lista es igual a cero
